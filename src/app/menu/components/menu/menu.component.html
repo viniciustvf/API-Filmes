@@ -7,7 +7,8 @@
         </button>
     </div>
     <div class="search">
-        <input type="text" placeholder="Search" [(ngModel)]="searchString">
+        <input (keyup.enter)="search()" type="text" placeholder="Search" [(ngModel)]="searchString" >
         <button (click)="search()" class="filtrar"><img src="../../../../assets/64673.png" width="15px"></button>
     </div>
 </div>
+

@@ -8,18 +8,12 @@ import { MenuService } from '../../services/menu.service';
 })
 export class MenuComponent {
 
-  public searchString!: string;
+  public searchString: string = 'star'
 
   constructor(private menuService: MenuService) {}
   
   public search(){
     this.menuService.search(this.searchString).subscribe()
   }
-
-
-
-
-
-
 
 }

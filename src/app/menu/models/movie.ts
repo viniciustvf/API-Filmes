@@ -1,8 +1,8 @@
 export interface Movie {
-    id: string;
-    title: string;
-    adult: boolean;
-    genres: string[];
-    popularity: number;
-    overview: string;
+  id: number;
+  title: string;
+  adult: boolean;
+  popularity: number;
+  overview: string;
+  banner: string;
 }

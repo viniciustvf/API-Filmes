@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="table">
+      <table *ngFor="let movie of movieList">
+        <tr>
+          <td colspan="3">
+            <img src="https://image.tmdb.org/t/p/w300/{{movie.banner}}" alt="Banner">
+          </td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">{{movie.title}}</td>
+        </tr>
+        <tr>
+          <td><span>Popularity: </span>{{movie.popularity}}</td>
+        </tr>
+        <tr>
+          <td><button>Details</button></td>
+        </tr>
+      </table> 
+    </div>
+</div>
