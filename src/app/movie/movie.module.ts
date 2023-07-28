@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { MovieFindComponent } from './components/movie-find/movie-find.component';
+import { RouterLink } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -10,7 +11,9 @@ import { MovieFindComponent } from './components/movie-find/movie-find.component
     MovieFindComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink,
+    HttpClientModule
   ],
   exports: [
     MovieFindComponent

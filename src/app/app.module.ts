@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { MenuModule } from './menu/menu.module';
 import { MovieDetailComponent } from './movie/components/movie-detail/movie-detail.component';
 import { MovieModule } from './movie/movie.module';
-import { HomeComponent } from './home/home/home.component';
 import { HomeModule } from './home/home.module';
 
 @NgModule({
@@ -17,9 +16,9 @@ import { HomeModule } from './home/home.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MenuModule,
     HomeModule,
-    MovieModule
+    MovieModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { MenuModule } from '../menu/menu.module';
+import { RouterLink } from '@angular/router';
 
 
 
@@ -11,7 +12,8 @@ import { MenuModule } from '../menu/menu.module';
   ],
   imports: [
     CommonModule,
-    MenuModule
+    MenuModule,
+    RouterLink
   ],
   exports: [
     HomeComponent

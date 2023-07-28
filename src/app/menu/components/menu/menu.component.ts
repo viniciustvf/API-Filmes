@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuService } from '../../services/menu.service';
+import { MovieService } from '../../../movie/services/movie.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,12 +8,12 @@ import { MenuService } from '../../services/menu.service';
 })
 export class MenuComponent {
 
-  public searchString: string = 'star'
+  public searchString: string = 'avatar'
 
-  constructor(private menuService: MenuService) {}
+  constructor(private movieService: MovieService) {}
   
   public search(){
-    this.menuService.search(this.searchString).subscribe()
+    this.movieService.search(this.searchString).subscribe()
   }
 
 }

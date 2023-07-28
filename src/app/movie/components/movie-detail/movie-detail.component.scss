@@ -1,0 +1,44 @@
+.container{
+    background-color: white;
+    margin-top: 50px;
+    margin-inline: 100px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.content{
+    display: flex;
+}
+
+.text{
+    width: 700px;
+}
+
+.title{
+    display: flex;
+    width: 840px;
+    height: 80px;
+    justify-content: space-around;
+}
+
+.txt{
+    width: 800px;
+    height: 80px;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.banner img{
+    position: sticky;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    width: 840px;
+}
+
+span{
+    margin: 5px;
+}

@@ -4,5 +4,8 @@ export interface Movie {
   adult: boolean;
   popularity: number;
   overview: string;
-  banner: string;
+  poster_path: string;
+  release_date: string;
+  genres: any[];
+  runtime: number;
 }

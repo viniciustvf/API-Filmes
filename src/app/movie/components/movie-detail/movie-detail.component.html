@@ -1,1 +1,30 @@
-<p>movie-detail works!</p>
+<div class="container">
+    <div class="content">
+        <div class="banner">
+            <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="Banner">
+        </div>
+        <div class="text">
+            <div class="title">
+                <h1>{{movie.title}} ({{movie.release_date.slice(0, 4)}})</h1>
+            </div>
+            <div class="info">
+                <span class="release">{{movie.release_date}}</span>
+                <span>●</span>
+                <span *ngFor="let genre of movie.genres" class="genres">{{genre.name}}, </span>
+            </div>
+            <div class="txt">
+                <h3>Popularity</h3>
+                <p>{{movie.popularity}}</p>
+                <h3>Overview</h3>
+                <p>{{movie.overview}}</p>
+                <h3>Duration</h3>
+                <p>{{movie.runtime}}</p>
+            </div>
+        </div>
+
+        
+        
+        
+
+    </div>
+</div>

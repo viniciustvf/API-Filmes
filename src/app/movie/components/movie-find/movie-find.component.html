@@ -3,7 +3,7 @@
       <table *ngFor="let movie of movieList">
         <tr>
           <td colspan="3">
-            <img src="https://image.tmdb.org/t/p/w300/{{movie.banner}}" alt="Banner">
+            <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="Banner">
           </td>
         </tr>
         <tr>
@@ -13,7 +13,7 @@
           <td><span>Popularity: </span>{{movie.popularity}}</td>
         </tr>
         <tr>
-          <td><button>Details</button></td>
+          <td><button routerLink="/find/{{movie.id}}">Details</button></td>
         </tr>
       </table> 
     </div>
