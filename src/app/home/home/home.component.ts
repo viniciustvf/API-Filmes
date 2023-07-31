@@ -14,6 +14,5 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.movieService.listAll().subscribe((data) => this.movieList = data);
-    
   }
 }

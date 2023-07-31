@@ -8,12 +8,12 @@ import { MovieService } from '../../../movie/services/movie.service';
 })
 export class MenuComponent {
 
-  public searchString: string = 'avatar'
+  public searchString: string = ''
 
   constructor(private movieService: MovieService) {}
   
   public search(){
-    this.movieService.search(this.searchString).subscribe()
+    this.movieService.search(this.searchString).subscribe();
   }
 
 }

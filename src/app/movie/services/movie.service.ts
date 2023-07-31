@@ -30,7 +30,7 @@ export class MovieService {
         Authorization: this.token,
       }),
     };
-    this.http
+    return this.http
       .get<Movie[]>(this.urlGetPopMovies, httpOptions)
       .pipe(
         map((response: any) => {
@@ -46,7 +46,7 @@ export class MovieService {
             runtime: movie.runtime,
           }));
         }),
-        tap((movies) => this.movieSubject.next(movies)),
+        tap((movies) => this.movieSubject = movies),
         catchError((error: HttpErrorResponse) => {
           console.error('Ocorreu um erro na requisição:', error);
           const errorMessage =
@@ -55,11 +55,9 @@ export class MovieService {
           return [];
         })
       )
-      .subscribe();
-    return this.movieSubject.asObservable();
   }
 
-  public search(movie: string): Observable<Movie[] | null> {
+  public search(movie: string): Observable<Movie[]> {
     this.router.navigate(['find']);
     let httpOptions = {
       headers: new HttpHeaders({
@@ -83,7 +81,10 @@ export class MovieService {
             genres: movie.genres,
           }));
         }),
-        tap((movies) => this.movieSubject.next(movies)),
+        tap((movies) => {
+          this.movieSubject.next(movies);
+          this.router.navigate(['find'], { queryParams: { query: movie } });
+        }),
         catchError((error) => {
           console.error('Error fetching movies:', error);
           return of(null);
